@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CHROME_VERSION: "111"
-      CHROMEDRIVER_VERSION: "111.0.5563.64"
+      CHROME_VERSION: "112.0.5615"
+      CHROMEDRIVER_VERSION: "112.0.5615.49"
       DISPLAY: ":99"
     steps:
       - name: Checkout code
