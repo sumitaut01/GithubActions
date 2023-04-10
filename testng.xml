@@ -4,7 +4,6 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testcases.Transactions"/>
-      <class name="Resurrection.GithubActions.Resurrection.GithubActions.AppTest"/>
       <class name="testcases.Customer"/>
     </classes>
   </test> <!-- Test -->

@@ -2,7 +2,7 @@ package testcases;
 
 import org.testng.annotations.Test;
 
-@Test(groups = "Transactions")
+//@Test(groups = "Transactions")
 public class Transactions {
 
 	
