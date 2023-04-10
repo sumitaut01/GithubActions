@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CHROME_VERSION: "112.0.5615"
+      CHROME_VERSION: "112.0.5615.50"
       CHROMEDRIVER_VERSION: "112.0.5615.49"
       DISPLAY: ":99"
     steps:
