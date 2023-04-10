@@ -4,7 +4,8 @@
   <test thread-count="5" name="Test">
     <groups>
     <run> 
-    <include name="Customer"></include></run>    
+    <include name="Customer">
+    </include></run>    
     </groups>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
