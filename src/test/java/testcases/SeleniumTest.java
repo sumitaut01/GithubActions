@@ -32,6 +32,8 @@ public class SeleniumTest {
 		    	options.addArguments("--remote-debugging-port=9222");
 		    	options.addArguments("--no-sandbox");
 		    	options.addArguments("--disable-dev-shm-usage");
+		    	options.addArguments("--start-maximized");
+		    	options.addArguments("--remote-allow-origins=*");
 		    	WebDriver driver = new ChromeDriver(options);
 		        driver = new ChromeDriver(options);
 		        
