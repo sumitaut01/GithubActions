@@ -33,8 +33,7 @@ public class SeleniumTest {
 		    	options.addArguments("--no-sandbox");
 		    	options.addArguments("--disable-dev-shm-usage");
 		    	options.addArguments("--start-maximized");
-		    	options.addArguments("--remote-allow-origins=*");
-		    	WebDriver driver = new ChromeDriver(options);
+		    	options.addArguments("--remote-allow-origins=*");		    	
 		        driver = new ChromeDriver(options);
 		        
 		    }
