@@ -5,6 +5,7 @@
     <classes>
       <class name="testcases.Transactions"/>
       <class name="testcases.Customer"/>
+         <class name="testcases.SeleniumTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
