@@ -2,6 +2,7 @@ package testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -23,7 +24,11 @@ public class SeleniumTest {
 		        //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");//not needed in Github action
 
 		        // Initialize Chrome driver
-		        driver = new ChromeDriver();
+		    	ChromeOptions options = new ChromeOptions();
+		    	options.addArguments("--remote-debugging-port=9222");
+		    	WebDriver driver = new ChromeDriver(options);
+		        driver = new ChromeDriver(options);
+		        
 		    }
 
 		    @Test
