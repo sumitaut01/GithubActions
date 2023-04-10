@@ -1,0 +1,26 @@
+name: Selenium TestNG Maven
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CHROME_BIN: /usr/bin/google-chrome
+      DISPLAY: ":99"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Install Maven, Chrome, and Chrome Driver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip xvfb libxi6 libgconf-2-4 google-chrome-stable
+          wget https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/chromedriver
+          sudo chown root:root /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
+          sudo apt-get install maven -y
+      
+      - name: Run Maven Test
+        run: mvn test
