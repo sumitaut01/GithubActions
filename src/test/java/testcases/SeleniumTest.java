@@ -7,6 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+@Test(groups = "SeleniumTest")
 public class SeleniumTest {
 	
 	
@@ -33,6 +34,8 @@ public class SeleniumTest {
 		        // Check title
 		        String expectedTitle = "Google";
 		        String actualTitle = driver.getTitle();
+		        
+		        System.out.println("Expected=>"+expectedTitle +" Actual=>"+actualTitle);
 		        Assert.assertEquals(actualTitle, expectedTitle);
 		    }
 

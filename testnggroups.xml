@@ -5,6 +5,7 @@
     <groups>
     <run> 
     <include name="Customer">
+    <include name="SeleniumTest"></include>
     </include></run>    
     </groups>
   </test> <!-- Test -->
