@@ -26,6 +26,8 @@ public class SeleniumTest {
 		        // Initialize Chrome driver
 		    	ChromeOptions options = new ChromeOptions();
 		    	options.addArguments("--remote-debugging-port=9222");
+		    	options.addArguments("--no-sandbox");
+		    	options.addArguments("--disable-dev-shm-usage");
 		    	WebDriver driver = new ChromeDriver(options);
 		        driver = new ChromeDriver(options);
 		        
