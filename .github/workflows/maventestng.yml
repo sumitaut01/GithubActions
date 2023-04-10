@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Install Maven, Chrome, and Chrome Driver
+      - name: Install Xvfb, Maven, Chrome, and Chrome Driver
         run: |
           sudo apt-get update
           sudo apt-get install -y wget unzip xvfb libxi6 libgconf-2-4 google-chrome-stable
@@ -21,6 +21,9 @@ jobs:
           sudo chown root:root /usr/local/bin/chromedriver
           sudo chmod +x /usr/local/bin/chromedriver
           sudo apt-get install maven -y
+      
+      - name: Start Xvfb
+        run: Xvfb :99 -screen 0 1024x768x24 &
       
       - name: Run Maven Test
         run: mvn test
