@@ -8,6 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 @Test(groups = "SeleniumTest")
 public class SeleniumTest {
 	
@@ -24,6 +26,8 @@ public class SeleniumTest {
 		        //System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");//not needed in Github action
 
 		        // Initialize Chrome driver
+		    	
+		    	WebDriverManager.chromedriver().setup();
 		    	ChromeOptions options = new ChromeOptions();
 		    	options.addArguments("--remote-debugging-port=9222");
 		    	options.addArguments("--no-sandbox");
